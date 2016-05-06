@@ -1,5 +1,5 @@
 # get-object
-Powershell command to convert a tab delimited string to an object
+Powershell command to convert a pipe delimited string to an object
 
 ## Prerequisites
 - None

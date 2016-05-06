@@ -1,5 +1,5 @@
 function Get-Object() {
-	$delimiter = "`t"
+	$delimiter = "|"
 	foreach ($inputObject in $args[0]) {
 		$returnObject = New-Object PSObject
 
@@ -7,7 +7,7 @@ function Get-Object() {
 		$matchCount = 0
 
 		## If so, split the input on that delimiter
-		$matches = $InputObject -split $delimiter
+		$matches = $InputObject -split $delimiter,0,"SimpleMatch"
 		$matchCount = $matches.Length
 		$startIndex = 0
 
